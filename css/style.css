@@ -78,9 +78,24 @@
   border: 5px;
   border-style: inset;
   border-color: gray;
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
+.footer a{
+color: white;
+background-color: black;
+text-transform: capitalize;
+text-decoration: none;
+ }
+
 .footer li:hover{
+  background-color: gray;
+  transition: .2s;
+  transform: scale(1.2);
+}
+
+.footer a:hover{
   background-color: gray;
   transition: .2s;
   transform: scale(1.2);
