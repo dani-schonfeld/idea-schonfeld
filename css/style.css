@@ -50,6 +50,13 @@
 
 }
 
+.nav li:hover{
+  background-color: gray;
+  transition: .3s;
+  transform: scale(1.2);
+  
+}
+
 .footer {
   grid-area: footer;
   background-color: darkblue;
@@ -73,11 +80,28 @@
   border-color: gray;
 }
 
+.footer li:hover{
+  background-color: gray;
+  transition: .2s;
+  transform: scale(1.2);
+}
+
 /* clases especificas del index */
 
 .header-index {
   grid-area: header-index;
-  background-color: blueviolet;
+  background-color: darkblue;
+
+}
+
+.header-index h1{
+color: white;
+background-image:linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14)) ;
+text-align: center;
+border: 15px;
+border-style: inset;
+padding: 5%;
+
 }
 
 .section-index {
@@ -118,7 +142,12 @@ list-style: none;
   padding: 10px;
   text-transform: capitalize;
   text-decoration: none;
+}
 
+.aside a:hover{
+  background-color: gray;
+  transition: .3s;
+  transform: scale(1.2);
 }
 
 /* clases especificas del "quien soy" */
