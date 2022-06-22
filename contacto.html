@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>contacto</title>
 </head>
@@ -22,11 +23,37 @@
       </ul>
     </div>
     <div class="header-contacto">
-
+      <h1>CONTACTAME!!!!</h1>
     </div>
     <div class="section-contacto">
-
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label for="firstName" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="firstName" required>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="lastName" required>
+        </div>
+        <div class="col-md-8">
+          <label for="emailInfo" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="emailInfo" required>
+        </div>
+        <div class="col-md-4">
+          <label for="phoneNumber" class="form-label">telefono</label>
+          <input type="text" class="form-control" id="phoneNumber" placeholder="+541136769934">
+        </div>
+        <div class="col-md-12">
+          <label for="comments" class="form-label">comentarios? preguntas?</label>
+          <textarea class="form-control" id="comments" rows="3" required></textarea>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
+
+
     <div class="footer">
       <ul>
         <li><a href="https://www.instagram.com/elretromante/">instagram</a></li>
@@ -37,6 +64,7 @@
       </ul>
     </div>
   </div>
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
 </body>
 
 </html>
