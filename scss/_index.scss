@@ -1,0 +1,64 @@
+/* clases especificas del index */
+  
+.header-index {
+    grid-area: header-index;
+    background-color: darkblue;
+  
+  }
+  
+  .header-index h1 {
+    color: white;
+    background-image: linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14));
+    text-align: center;
+    border: 15px;
+    border-style: inset;
+    padding: 5%;
+  
+  }
+  
+  .section-index {
+    grid-area: section-index;
+    background-color: brown;
+    width: 100%;
+  }
+  
+  .aside {
+    grid-area: aside;
+    background-color: darkblue;
+    font-size: 15px;
+  }
+  
+  .aside h1 {
+    color: white;
+    text-decoration-line: underline;
+  }
+  
+  .aside ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+  }
+  
+  .aside li {
+    margin: 25px;
+    list-style: none;
+  
+  }
+  
+  .aside a {
+    color: white;
+    background-color: black;
+    border: 5px;
+    border-color: gray;
+    border-style: inset;
+    padding: 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+  }
+  
+  .aside a:hover {
+    background-color: gray;
+    transition: .3s;
+    transform: scale(1.2);
+  }
+  
