@@ -1,0 +1,32 @@
+.container-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav header-contacto header-contacto header-contacto"
+      "nav section-contacto section-contacto section-contacto"
+      "footer footer footer footer";
+  }
+  
+  .header-contacto {
+    grid-area: header-contacto;
+    background-color: darkblue;
+  }
+  
+  .header-contacto h1{
+  color: white;
+    background-image: linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14));
+    text-align: center;
+    border: 15px;
+    border-style: inset;
+    padding: 5%;
+    margin-bottom: 0%;
+     }
+  
+  .section-contacto {
+    grid-area: section-contacto;
+    background-color: darkblue;
+   
+  }

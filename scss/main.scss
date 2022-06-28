@@ -1,429 +1,144 @@
 * {
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* contenedor de grid index */
-  .container {
-    display: grid;
-    grid-template-rows: repeat(4, 250px);
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "nav header-index header-index header-index"
-      "nav section-index section-index aside"
-      "nav section-index section-index aside"
-      "footer footer footer footer";
-  
-  }
-  
-  /* clases generales para todas las paginas */
-  .nav {
-    grid-area: nav;
-    background-color: darkblue;
-    font-size: 30px;
-    padding: 5px;
-  }
-  
-  
-  .logo {
+  padding: 0;
+  margin: 0;
+}
+
+@import './index.scss';
+@import './quien-soy.scss';
+@import './formatos.scss';
+@import './eventos.scss';
+@import './contacto.scss';
+
+
+.nav {
+  grid-area: nav;
+  background-color: darkblue;
+  font-size: 30px;
+  padding: 5px;
+
+
+
+  &__logo {
     display: flex;
     width: 300px;
     top: 50px;
     margin: 0;
   }
-  
-  .nav ul {
+
+  &__ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
     margin-top: 70px;
+
+    li {
+      color: white;
+      background-color: black;
+      border: 5px;
+      border-style: inset;
+      border-color: gray;
+      padding: 20px;
+      margin: 5px;
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+
+    a {
+      color: white;
+      background-color: black;
+      text-transform: capitalize;
+      text-decoration: none;
+    }
   }
-  
-  .nav li {
-    color: white;
-    background-color: black;
-    border: 5px;
-    border-style: inset;
-    border-color: gray;
-    padding: 20px;
-    margin: 5px;
-    text-transform: capitalize;
-    text-decoration: none;
-  
-  }
-  
-  .nav a{
-    color: white;
-    background-color: black;
-    text-transform: capitalize;
-    text-decoration: none;
-  }
-  
-  .nav li:hover {
+
+  li:hover {
     background-color: gray;
     transition: .3s;
     transform: scale(1.2);
-    
+
   }
-  
-  .nav a:hover{
+
+  a:hover {
     background-color: gray;
     transition: .3s;
     transform: scale(1.2);
     text-transform: capitalize;
     text-decoration: none;
   }
-  
-  
-  
-  .footer {
-    grid-area: footer;
-    background-color: darkblue;
-    animation-name: footermagic;
-    animation-duration: 7s;
-    animation-iteration-count: 5;
-  }
-  
-  .footer ul {
+}
+
+
+
+
+.footer {
+  grid-area: footer;
+  background-color: darkblue;
+  animation-name: footermagic;
+  animation-duration: 7s;
+  animation-iteration-count: 5;
+
+
+  &__ul {
     display: flex;
     justify-content: space-around;
     font-size: 50px;
     list-style: none;
     margin-top: 100px;
-  
+
+
+
+    li {
+      color: white;
+      background-color: black;
+      padding: 15px;
+      border: 5px;
+      border-style: inset;
+      border-color: gray;
+      text-transform: capitalize;
+      text-decoration: none;
+
+    }
+
+    a {
+      color: white;
+      background-color: black;
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+
+    li:hover {
+      background-color: gray;
+      transition: .2s;
+      transform: scale(1.2);
+    }
+
+    a:hover {
+      background-color: gray;
+      transition: .2s;
+      transform: scale(1.2);
+    }
   }
-  
-  .footer li {
-    color: white;
-    background-color: black;
-    padding: 15px;
-    border: 5px;
-    border-style: inset;
-    border-color: gray;
-    text-transform: capitalize;
-    text-decoration: none;
-   
-  }
-  
-  .footer a {
-    color: white;
-    background-color: black;
-    text-transform: capitalize;
-    text-decoration: none;
-  }
-  
-  .footer li:hover {
-    background-color: gray;
-    transition: .2s;
-    transform: scale(1.2);
-  }
-  
-  .footer a:hover {
-    background-color: gray;
-    transition: .2s;
-    transform: scale(1.2);
-  }
-  
-  @keyframes footermagic{
-    0%{
+
+  @keyframes footermagic {
+    0% {
       background-color: darkblue;
     }
-    25%{
-      background-color:  rgb(94, 68, 19);
+
+    25% {
+      background-color: rgb(94, 68, 19);
     }
-    50%{
+
+    50% {
       background-color: rgb(50, 31, 89);
     }
-    75%{
+
+    75% {
       background-color: rgb(44, 13, 44);
     }
-    100%{
+
+    100% {
       background-color: rgb(36, 20, 52);
     }
   }
-  
-  /* clases especificas del index */
-  
-  .header-index {
-    grid-area: header-index;
-    background-color: darkblue;
-  
-  }
-  
-  .header-index h1 {
-    color: white;
-    background-image: linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14));
-    text-align: center;
-    border: 15px;
-    border-style: inset;
-    padding: 5%;
-  
-  }
-  
-  .section-index {
-    grid-area: section-index;
-    background-color: brown;
-    width: 100%;
-  }
-  
-  .aside {
-    grid-area: aside;
-    background-color: darkblue;
-    font-size: 15px;
-  }
-  
-  .aside h1 {
-    color: white;
-    text-decoration-line: underline;
-  }
-  
-  .aside ul {
-    display: flex;
-    flex-direction: column;
-    font-size: 40px;
-  }
-  
-  .aside li {
-    margin: 25px;
-    list-style: none;
-  
-  }
-  
-  .aside a {
-    color: white;
-    background-color: black;
-    border: 5px;
-    border-color: gray;
-    border-style: inset;
-    padding: 10px;
-    text-transform: capitalize;
-    text-decoration: none;
-  }
-  
-  .aside a:hover {
-    background-color: gray;
-    transition: .3s;
-    transform: scale(1.2);
-  }
-  
-  /* clases especificas del "quien soy" */
-  
-  .container-quiensoy {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "nav header-quiensoy header-quiensoy header-quiensoy"
-      "nav section-quiensoy section-quiensoy section-quiensoy"
-      "footer footer footer footer";
-  }
-  
-  
-  
-  .header-quiensoy {
-    grid-area: header-quiensoy;
-    background-color: darkblue;
-  
-  }
-  
-  .header-quiensoy h1 {
-  color: white;
-  background-image: linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14));
-  text-align: center;
-  border: 15px;
-  border-style: inset;
-  padding: 5%;
-  margin-bottom: 0%;
-   }
-  
-   .header-quiensoy p {
-    background-color: black;
-    color: aliceblue;
-    border-style:inset;
-    border-color: gray;
-    border-width: 15px;
-    width: 40%;
-    height: 20%;
-    padding: 10px;
-    margin-top: 30px;
-  }
-  
-  .section-quiensoy {
-    grid-area: section-quiensoy;
-    background-color: darkblue;
-  }
-  
-  
-  
-  
-  /* clases especificas de formatos */
-  
-  .container-formatos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "nav header-formatos header-formatos header-formatos"
-      "nav section-formatos section-formatos section-formatos"
-      "footer footer footer footer";
-  }
-  
-  .header-formatos {
-    grid-area: header-formatos;
-    background-color: darkblue;
-  }
-  
-  .header-formatos h1 {
-    color: white;
-    background-image: linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14));
-    text-align: center;
-    border: 15px;
-    border-style: inset;
-    padding: 5%;
-    margin-bottom: 0%;
-     }
-  
-  .section-formatos {
-    grid-area: section-formatos;
-    background-color: darkblue;
-  }
-  
-  h1{
-    text-align: center;
-    padding: 10px;
-    color: rgb(97, 96, 96);
-  }
-  .descripcion{
-    text-align: center;
-    padding: 5px 25px;
-    color: rgb(53, 53, 53);
-  }
-  
-  .card{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    margin-top: -76px;
-    background-color: darkblue;
-  
-  }
-  .card__perfil{
-    width: 310px;
-    padding: 20px;
-    box-shadow: 1px 1px 5px rgb(201, 201, 201);
-    border: solid rgba(3, 133, 255, 0) 10px;
-    border-radius: 10px;
-    border-style: inset;
-    background-color: aliceblue;
-  }
-  .card__perfil:hover{
-    border: solid rgb(3, 133, 255) 2px;
-  }
-  .card__perfil:hover img{
-    transform: rotate(0);
-  }
-  img{
-    width: 140px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgb(216, 216, 216);
-    transform: rotate(-30deg);
-    transition: all .3s;
-  }
-  .card__nombre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-  hr{
-    width: 100%;
-    height: 4px;
-    background: rgb(223, 221, 221);
-    margin: 20px 5px;
-  }
-  .card__button{
-    text-align: center;
-  }
-  .enlace{
-    background: rgb(0, 110, 255);
-    padding: 8px 20px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* clases especificas para eventos */
-  .container-eventos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "nav header-eventos header-eventos header-eventos"
-      "nav section-eventos section-eventos section-eventos"
-      "footer footer footer footer";
-  }
-  
-  .header-eventos {
-    grid-area: header-eventos;
-    background-color: darkblue;
-  }
-  
-  .header-eventos h1{
-    
-      color: white;
-      background-image: linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14));
-      text-align: center;
-      border: 15px;
-      border-style: inset;
-      padding: 5%;
-      margin-bottom: 0%;
-       }
-  
-  
-  .section-eventos {
-    grid-area: section-eventos;
-    background-color: darkblue;
-  }
-  
-  
-  /* clases especificas para contacto */
-  .container-contacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "nav header-contacto header-contacto header-contacto"
-      "nav section-contacto section-contacto section-contacto"
-      "footer footer footer footer";
-  }
-  
-  .header-contacto {
-    grid-area: header-contacto;
-    background-color: darkblue;
-  }
-  
-  .header-contacto h1{
-  color: white;
-    background-image: linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14));
-    text-align: center;
-    border: 15px;
-    border-style: inset;
-    padding: 5%;
-    margin-bottom: 0%;
-     }
-  
-  .section-contacto {
-    grid-area: section-contacto;
-    background-color: darkblue;
-   
-  }
-  
+}
