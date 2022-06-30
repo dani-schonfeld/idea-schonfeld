@@ -11,13 +11,6 @@
   .indexcontainer__header-index {
     grid-area: header-index;
     background-color: darkblue; }
-    .indexcontainer__header-index h1 {
-      color: white;
-      background-image: linear-gradient(to bottom, darkblue, #2c0d2c, #a6710e);
-      text-align: center;
-      border: 15px;
-      border-style: inset;
-      padding: 5%; }
   .indexcontainer__section-index {
     grid-area: section-index;
     background-color: brown;
@@ -60,14 +53,6 @@
   .container-quiensoy__header-quiensoy {
     grid-area: header-quiensoy;
     background-color: darkblue; }
-    .container-quiensoy__header-quiensoy h1 {
-      color: white;
-      background-image: linear-gradient(to bottom, darkblue, #2c0d2c, #a6710e);
-      text-align: center;
-      border: 15px;
-      border-style: inset;
-      padding: 5%;
-      margin-bottom: 0%; }
     .container-quiensoy__header-quiensoy p {
       background-color: black;
       color: aliceblue;
@@ -92,14 +77,6 @@
   .container-formatos__header-formatos {
     grid-area: header-formatos;
     background-color: darkblue; }
-    .container-formatos__header-formatos h1 {
-      color: white;
-      background-image: linear-gradient(to bottom, darkblue, #2c0d2c, #a6710e);
-      text-align: center;
-      border: 15px;
-      border-style: inset;
-      padding: 5%;
-      margin-bottom: 0%; }
 
 .section-formatos {
   grid-area: section-formatos;
@@ -167,15 +144,6 @@
   grid-area: header-eventos;
   background-color: darkblue; }
 
-.header-eventos h1 {
-  color: white;
-  background-image: linear-gradient(to bottom, darkblue, #2c0d2c, #a6710e);
-  text-align: center;
-  border: 15px;
-  border-style: inset;
-  padding: 5%;
-  margin-bottom: 0%; }
-
 .section-eventos {
   grid-area: section-eventos;
   background-color: darkblue; }
@@ -241,18 +209,17 @@
   grid-area: header-contacto;
   background-color: darkblue; }
 
-.header-contacto h1 {
+.section-contacto {
+  grid-area: section-contacto;
+  background-color: darkblue; }
+
+.indexcontainer__header-index h1, .container-quiensoy__header-quiensoy h1, .container-formatos__header-formatos h1, .header-eventos h1, .header-contacto h1 {
   color: white;
   background-image: linear-gradient(to bottom, darkblue, #2c0d2c, #a6710e);
   text-align: center;
   border: 15px;
   border-style: inset;
-  padding: 5%;
-  margin-bottom: 0%; }
-
-.section-contacto {
-  grid-area: section-contacto;
-  background-color: darkblue; }
+  padding: 5%; }
 
 .nav {
   grid-area: nav;
@@ -273,11 +240,16 @@
     .nav__ul li {
       color: white;
       background-color: black;
+      padding: 15px;
       border: 5px;
       border-style: inset;
       border-color: gray;
+      text-transform: capitalize;
+      text-decoration: none;
       padding: 20px;
+      border: 5px;
       margin: 5px;
+      border-style: inset;
       text-transform: capitalize;
       text-decoration: none; }
     .nav__ul a {

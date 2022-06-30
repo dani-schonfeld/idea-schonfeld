@@ -17,12 +17,7 @@
         background-color: darkblue;
 
         h1 {
-            color: white;
-            background-image: linear-gradient(to bottom, darkblue, rgb(44, 13, 44), rgb(166, 113, 14));
-            text-align: center;
-            border: 15px;
-            border-style: inset;
-            padding: 5%;
+          @extend %titulo
         }
     }
 &__section-index {

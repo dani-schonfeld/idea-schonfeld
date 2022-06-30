@@ -8,6 +8,8 @@
 @import './formatos.scss';
 @import './eventos.scss';
 @import './contacto.scss';
+@import './variables/extend.scss';
+@import './variables/mixing';
 
 
 .nav {
@@ -33,13 +35,11 @@
     margin-top: 70px;
 
     li {
-      color: white;
-      background-color: black;
-      border: 5px;
-      border-style: inset;
-      border-color: gray;
+      @include navegador (white, black, gray); 
       padding: 20px;
+      border: 5px;
       margin: 5px;
+      border-style: inset;
       text-transform: capitalize;
       text-decoration: none;
     }
@@ -89,15 +89,7 @@
 
 
     li {
-      color: white;
-      background-color: black;
-      padding: 15px;
-      border: 5px;
-      border-style: inset;
-      border-color: gray;
-      text-transform: capitalize;
-      text-decoration: none;
-
+      @include navegador (white, black, gray)
     }
 
     a {
